@@ -1111,6 +1111,82 @@ export class Stripe {
   threeDSecure: ThreeDSecure;
   treasury: Treasury;
   v2: V2;
+  v1: {
+    accountLinks: AccountLinkResource;
+    accountSessions: AccountSessionResource;
+    accounts: AccountResource;
+    applePayDomains: ApplePayDomainResource;
+    applicationFees: ApplicationFeeResource;
+    balance: BalanceResource;
+    balanceSettings: BalanceSettingResource;
+    balanceTransactions: BalanceTransactionResource;
+    charges: ChargeResource;
+    confirmationTokens: ConfirmationTokenResource;
+    countrySpecs: CountrySpecResource;
+    coupons: CouponResource;
+    creditNotes: CreditNoteResource;
+    customerSessions: CustomerSessionResource;
+    customers: CustomerResource;
+    disputes: DisputeResource;
+    ephemeralKeys: EphemeralKeyResource;
+    events: EventResource;
+    exchangeRates: ExchangeRateResource;
+    fileLinks: FileLinkResource;
+    files: FileResource;
+    invoiceItems: InvoiceItemResource;
+    invoicePayments: InvoicePaymentResource;
+    invoiceRenderingTemplates: InvoiceRenderingTemplateResource;
+    invoices: InvoiceResource;
+    mandates: MandateResource;
+    paymentAttemptRecords: PaymentAttemptRecordResource;
+    paymentIntents: PaymentIntentResource;
+    paymentLinks: PaymentLinkResource;
+    paymentMethodConfigurations: PaymentMethodConfigurationResource;
+    paymentMethodDomains: PaymentMethodDomainResource;
+    paymentMethods: PaymentMethodResource;
+    paymentRecords: PaymentRecordResource;
+    payouts: PayoutResource;
+    plans: PlanResource;
+    prices: PriceResource;
+    products: ProductResource;
+    promotionCodes: PromotionCodeResource;
+    quotes: QuoteResource;
+    refunds: RefundResource;
+    reviews: ReviewResource;
+    setupAttempts: SetupAttemptResource;
+    setupIntents: SetupIntentResource;
+    shippingRates: ShippingRateResource;
+    sources: SourceResource;
+    subscriptionItems: SubscriptionItemResource;
+    subscriptionSchedules: SubscriptionScheduleResource;
+    subscriptions: SubscriptionResource;
+    taxCodes: TaxCodeResource;
+    taxIds: TaxIdResource;
+    taxRates: TaxRateResource;
+    tokens: TokenResource;
+    topups: TopupResource;
+    transfers: TransferResource;
+    webhookEndpoints: WebhookEndpointResource;
+    apps: Apps;
+    billing: Billing;
+    billingPortal: BillingPortal;
+    checkout: Checkout;
+    climate: Climate;
+    entitlements: Entitlements;
+    financialConnections: FinancialConnections;
+    forwarding: Forwarding;
+    identity: Identity;
+    issuing: Issuing;
+    productCatalog: ProductCatalog;
+    radar: Radar;
+    reporting: Reporting;
+    sigma: Sigma;
+    tax: Tax;
+    terminal: Terminal;
+    testHelpers: TestHelpers;
+    threeDSecure: ThreeDSecure;
+    treasury: Treasury;
+  };
   // StripeInstanceVariables: The end of the section generated from our OpenAPI spec
   // webhooks: WebhookEndpointResource;
   account: AccountResource;
@@ -1307,6 +1383,82 @@ export class Stripe {
     this.threeDSecure = new ThreeDSecure(this);
     this.treasury = new Treasury(this);
     this.v2 = new V2(this);
+    this.v1 = {
+      accountLinks: this.accountLinks,
+      accountSessions: this.accountSessions,
+      accounts: this.accounts,
+      applePayDomains: this.applePayDomains,
+      applicationFees: this.applicationFees,
+      balance: this.balance,
+      balanceSettings: this.balanceSettings,
+      balanceTransactions: this.balanceTransactions,
+      charges: this.charges,
+      confirmationTokens: this.confirmationTokens,
+      countrySpecs: this.countrySpecs,
+      coupons: this.coupons,
+      creditNotes: this.creditNotes,
+      customerSessions: this.customerSessions,
+      customers: this.customers,
+      disputes: this.disputes,
+      ephemeralKeys: this.ephemeralKeys,
+      events: this.events,
+      exchangeRates: this.exchangeRates,
+      fileLinks: this.fileLinks,
+      files: this.files,
+      invoiceItems: this.invoiceItems,
+      invoicePayments: this.invoicePayments,
+      invoiceRenderingTemplates: this.invoiceRenderingTemplates,
+      invoices: this.invoices,
+      mandates: this.mandates,
+      paymentAttemptRecords: this.paymentAttemptRecords,
+      paymentIntents: this.paymentIntents,
+      paymentLinks: this.paymentLinks,
+      paymentMethodConfigurations: this.paymentMethodConfigurations,
+      paymentMethodDomains: this.paymentMethodDomains,
+      paymentMethods: this.paymentMethods,
+      paymentRecords: this.paymentRecords,
+      payouts: this.payouts,
+      plans: this.plans,
+      prices: this.prices,
+      products: this.products,
+      promotionCodes: this.promotionCodes,
+      quotes: this.quotes,
+      refunds: this.refunds,
+      reviews: this.reviews,
+      setupAttempts: this.setupAttempts,
+      setupIntents: this.setupIntents,
+      shippingRates: this.shippingRates,
+      sources: this.sources,
+      subscriptionItems: this.subscriptionItems,
+      subscriptionSchedules: this.subscriptionSchedules,
+      subscriptions: this.subscriptions,
+      taxCodes: this.taxCodes,
+      taxIds: this.taxIds,
+      taxRates: this.taxRates,
+      tokens: this.tokens,
+      topups: this.topups,
+      transfers: this.transfers,
+      webhookEndpoints: this.webhookEndpoints,
+      apps: this.apps,
+      billing: this.billing,
+      billingPortal: this.billingPortal,
+      checkout: this.checkout,
+      climate: this.climate,
+      entitlements: this.entitlements,
+      financialConnections: this.financialConnections,
+      forwarding: this.forwarding,
+      identity: this.identity,
+      issuing: this.issuing,
+      productCatalog: this.productCatalog,
+      radar: this.radar,
+      reporting: this.reporting,
+      sigma: this.sigma,
+      tax: this.tax,
+      terminal: this.terminal,
+      testHelpers: this.testHelpers,
+      threeDSecure: this.threeDSecure,
+      treasury: this.treasury,
+    };
     // StripeInitInstanceVariables: The end of the section generated from our OpenAPI spec
 
     // hardcoded properties and resources

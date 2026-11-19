@@ -313,6 +313,25 @@ function createWebhooksTestSuite(stripe) {
         );
       });
 
+      it('should raise a SignatureVerificationError for an empty v1 value', async () => {
+        await expect(
+          verifyHeaderFn(EVENT_PAYLOAD_STRING, 't=1,v1=', SECRET)
+        ).to.be.rejectedWith(
+          StripeSignatureVerificationError,
+          /No signatures found with expected scheme/
+        );
+      });
+
+      it('should raise a SignatureVerificationError for a non-ASCII v1 value of matching string length', async () => {
+        const header = 't=1,v1=' + 'a'.repeat(63) + 'é';
+        await expect(
+          verifyHeaderFn(EVENT_PAYLOAD_STRING, header, SECRET)
+        ).to.be.rejectedWith(
+          StripeSignatureVerificationError,
+          /No signatures found matching the expected signature for payload/
+        );
+      });
+
       it('should raise a SignatureVerificationError when there are no valid signatures for the payload', async () => {
         const header = stripe.webhooks.generateTestHeaderString({
           payload: EVENT_PAYLOAD_STRING,

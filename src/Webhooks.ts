@@ -700,7 +700,9 @@ export function createWebhooks(
           accum.timestamp = parseInt(kv[1], 10);
         }
 
-        if (kv[0] === scheme) {
+        // Skip empty / missing values (e.g. `v1=` or `v1`) so they surface as
+        // "No signatures found" rather than a later secureCompare TypeError.
+        if (kv[0] === scheme && kv[1]) {
           accum.signatures.push(kv[1]);
         }
 

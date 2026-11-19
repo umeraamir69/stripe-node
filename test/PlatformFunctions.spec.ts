@@ -96,6 +96,13 @@ function testPlatform(platformFunctions: PlatformFunctions): void {
         );
       });
 
+      it('returns false when UTF-8 byte lengths differ despite equal string lengths', () => {
+        // 64 JS chars each, but 'é' is two UTF-8 bytes so encodings differ.
+        expect(
+          platformFunctions.secureCompare('a'.repeat(64), 'a'.repeat(63) + 'é')
+        ).to.equal(false);
+      });
+
       it('throws an error if not given two things to compare', () => {
         expect(() => {
           platformFunctions.secureCompare('potato');
